@@ -33,27 +33,27 @@ function gameOn(userDragon) {
     cpu = (Math.floor(Math.random() * (4 - 1) + 1)); //The maximum is exclusive and the minimum is inclusive
         if (userDragon == cpu) {
             document.querySelector(".guide").textContent = "Draw, you picked same Dragon";
-        } else if (userDragon == 1 || cpu == 2) {
+        } else if (userDragon == 1 && cpu == 2) {
             document.querySelector(".guide").textContent = "CPU wins, Smaug > Horntail";
             score2++;
             updateScore()
-        } else if (userDragon == 1 || cpu == 3) {
+        } else if (userDragon == 1 && cpu == 3) {
             document.querySelector(".guide").textContent = "You win, Horntail > Drogorn";
             score1++;
             updateScore()
-        } else if (userDragon == 2 || cpu == 1) {
+        } else if (userDragon == 2 && cpu == 1) {
             document.querySelector(".guide").textContent = "You win, Smaug > Horntail";
             score1++;
             updateScore()
-        }  else if (userDragon == 2 || cpu == 3) {
+        }  else if (userDragon == 2 && cpu == 3) {
             document.querySelector(".guide").textContent = "CPU wins, Drogorn > Smaug";
             score2++;
             updateScore()
-        } else if (userDragon == 3 || cpu == 1) {
+        } else if (userDragon == 3 && cpu == 1) {
             document.querySelector(".guide").textContent = "CPU wins, Horntail > Drogorn";
             score2++;
             updateScore()
-        }  else if (userDragon == 3 || cpu == 2) {
+        }  else if (userDragon == 3 && cpu == 2) {
             document.querySelector(".guide").textContent = "You win, Drogorn > Smaug";  
             score1++;
             updateScore()
